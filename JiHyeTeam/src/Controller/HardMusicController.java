@@ -1,5 +1,6 @@
 package Controller;
 
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -29,27 +30,14 @@ public class HardMusicController {
 
 	public void HardPlay() {
 
-		int[] index = new int[hardMusicList.size()];
-
-		for (int i = 0; i < hardMusicList.size(); i++) {
-			index[i] = rd.nextInt(0, hardMusicList.size()-1);
-			for (int j = 0; j < i; j++) {
-				if (index[i] == index[j]) {
-					j--;
-				}
-			}
-		}
 		int life = 3;
 		for (int i = 0; i < hardMusicList.size(); i++) {
-			if (mp3.isPlaying()) {// 음악 정지
-				mp3.stop();
-			}
 			
-			mp3.play(hardMusicList.get(index[i]).getMusicPath()); 
 			System.out.print("노래제목을 입력해주세요 >> ");
+			mp3.play(hardMusicList.get(i).getMusicPath()); 
 			String answer = sc.next();
 			
-			if (hardMusicList.get(index[i]).getName() == answer) {
+			if (hardMusicList.get(i).getName() == answer) {
 				System.out.println("정답입니다.");
 			} else {
 				System.out.println("정답이 아닙니다.");
