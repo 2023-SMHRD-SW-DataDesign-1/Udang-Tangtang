@@ -2,6 +2,7 @@ package View;
 
 import java.util.Scanner;
 
+import Controller.HardMusicController;
 import Controller.joinController;
 import Controller.loginController;
 import MemberDTO.memberDTO;
@@ -41,7 +42,8 @@ public class main {
 
 
 			} else if (select == 3) { // 게임시작
-
+				HardMusicController hcon = new HardMusicController();
+				hcon.HardPlay();
 			} else if (select == 4) {
 				String result = null;
 				System.out.println("순위를 확인합니다.");
