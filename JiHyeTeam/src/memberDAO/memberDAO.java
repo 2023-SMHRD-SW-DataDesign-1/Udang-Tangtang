@@ -8,6 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import MemberDTO.memberDTO;
+
 public class memberDAO {
 
 	Connection conn;
@@ -36,14 +38,14 @@ public class memberDAO {
 
 	}
 
-	public int insertMember(String id, String pw) {
+	public int insertMember(memberDTO memdto) {
 		getCon();
 		String sql = "insert into member values(?,?)";
 		int cnt = 0;
 		try {
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, id);
-			pst.setString(2, pw);
+			pst.setString(1, memdto.getId());
+			pst.setString(2, memdto.getPw());
 
 			cnt = pst.executeUpdate();
 
@@ -70,7 +72,7 @@ public class memberDAO {
 
 	}
 
-	public String loginMember(String id, String pw) {
+	public String loginMember(memberDTO memdto) {
 		getCon();
 		String return_id = null;
 		try {
@@ -78,8 +80,8 @@ public class memberDAO {
 
 			pst = conn.prepareStatement(sql);
 
-			pst.setString(1, id);
-			pst.setString(2, pw);
+			pst.setString(1, memdto.getId());
+			pst.setString(2, memdto.getPw());
 
 			rs = pst.executeQuery();
 

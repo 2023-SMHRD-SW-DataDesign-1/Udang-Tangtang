@@ -7,7 +7,6 @@ import Controller.loginController;
 import MemberDTO.memberDTO;
 import memberDAO.memberDAO;
 
-
 public class main {
 
 	public static void main(String[] args) {
@@ -49,9 +48,6 @@ public class main {
 				memberDAO dao = new memberDAO();
 				result = dao.Rankingck();
 				System.out.println(result);
-
-
-			} else if (select == 4) { // 랭킹확인
 
 			} else if (select == 5) { // 종료
 				System.out.println("종료되었습니다.");
