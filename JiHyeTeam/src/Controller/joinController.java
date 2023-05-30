@@ -13,20 +13,18 @@ public class joinController {
 		System.out.println("id 는 " + dto.getId());
 		System.out.println("pw 는 " + dto.getPw());
 
-	
+		memberDAO dao = new memberDAO();
+		int row = dao.insertMember(id, pw);
 
-	memberDAO dao = new memberDAO();
-	int row = dao.insertMember(id,pw);
+		String result = null;
+		if (row > 0) {
+			System.out.println("회원가입 성공");
+			result = "성공";
+		} else {
+			System.out.println("회원가입 실패");
+			result = "실패";
+		}
 
-	String result = null;
-	if(row>0){
-		System.out.println("회원가입 성공");
-		result = "성공";
-	}else{
-		System.out.println("회원가입 실패");
-		result = "실패";
-	}
-
-	  return result;
+		return result;
 	}
 }// class
