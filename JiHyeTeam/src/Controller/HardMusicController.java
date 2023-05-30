@@ -32,7 +32,7 @@ public class HardMusicController {
 		int[] index = new int[hardMusicList.size()];
 
 		for (int i = 0; i < hardMusicList.size(); i++) {
-			index[i] = rd.nextInt(0, hardMusicList.size());
+			index[i] = rd.nextInt(0, hardMusicList.size()-1);
 			for (int j = 0; j < i; j++) {
 				if (index[i] == index[j]) {
 					j--;
