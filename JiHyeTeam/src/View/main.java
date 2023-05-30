@@ -15,9 +15,9 @@ public class main {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("=======회원가입======");
-		System.out.print("[1] 회원가입 [2] 로그인 [3] 게임시작 [4] 랭킹확인 [5] 종료 >> ");
-		int select = sc.nextInt();
 		while (true) {
+			System.out.print("[1] 회원가입 [2] 로그인 [3] 게임시작 [4] 랭킹확인 [5] 종료 >> ");
+			int select = sc.nextInt();
 			if (select == 1) { // 회원가입
 				System.out.print("아이디 입력 : ");
 				String id = sc.next();

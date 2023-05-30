@@ -5,8 +5,6 @@ import memberDAO.memberDAO;
 
 public class joinController {
 
-	String id;
-	String pw;
 
 	// 사용자가 입력한 데이터 확인
 	public String Join(memberDTO memdto) {
@@ -14,10 +12,10 @@ public class joinController {
 		System.out.println("pw 는 " + memdto.getPw());
 
 		memberDAO dao = new memberDAO();
-		int row = dao.insertMember(memdto);
+		int cnt = dao.insertMember(memdto);
 
 		String result = null;
-		if (row > 0) {
+		if (cnt > 0) {
 			System.out.println("회원가입 성공");
 			result = "성공";
 		} else {

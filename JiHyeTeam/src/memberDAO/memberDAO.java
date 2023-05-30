@@ -40,32 +40,30 @@ public class memberDAO {
 
 	public int insertMember(memberDTO memdto) {
 		getCon();
-		String sql = "insert into member values(?,?)";
+		String sql = "insert into member values(?,?,?)";
 		int cnt = 0;
 		try {
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, memdto.getId());
 			pst.setString(2, memdto.getPw());
+			pst.setInt(3, memdto.getScore());
 
 			cnt = pst.executeUpdate();
 
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			getClose();
-
-			return cnt;
-
 		}
+		return cnt;
 	}
 
 	public void getClose() {
 
 		try {
-			if (pst != null)
-				pst.close();
-			if (conn != null)
-				conn.close();
+			if(rs != null) rs.close();
+			if (pst != null) pst.close();
+			if (conn != null) conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
