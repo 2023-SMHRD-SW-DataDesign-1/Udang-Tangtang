@@ -93,4 +93,33 @@ public class memberDAO {
 		}
 		return return_id;
 	}
+	
+	
+	
+	public String Rankingck() {
+		String result = null;
+		getCon();
+		try {
+		String sql = "select id, rownum from(select * from member order by score desc) where rownum <= 10";
+		
+		pst = conn.prepareStatement(sql);
+		
+		rs = pst.executeQuery();
+		
+		while(rs.next()) {
+			result = rs.getString("id");
+		}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			
+		}finally {
+			getClose();
+		}
+	
+		return result;
+}
+	
+	
+
+	
 }

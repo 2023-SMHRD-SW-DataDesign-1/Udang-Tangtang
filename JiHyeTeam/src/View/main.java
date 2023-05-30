@@ -3,6 +3,7 @@ package View;
 import java.util.Scanner;
 
 import Controller.joinController;
+import memberDAO.memberDAO;
 
 public class main {
 
@@ -35,6 +36,11 @@ public class main {
 			} else if (select == 3) {
 
 			} else if (select == 4) {
+				String result = null;
+				System.out.println("순위를 확인합니다.");
+				memberDAO dao = new memberDAO();
+				result = dao.Rankingck();
+				System.out.println(result);
 
 			} else if (select == 5) {
 				System.out.println("종료되었습니다.");
