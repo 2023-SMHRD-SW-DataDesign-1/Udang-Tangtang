@@ -3,6 +3,8 @@ package View;
 import java.util.Scanner;
 
 import Controller.joinController;
+import Controller.loginController;
+import MemberDTO.memberDTO;
 
 public class main {
 
@@ -19,9 +21,10 @@ public class main {
 				String id = sc.next();
 				System.out.print("비밀번호 입력 : ");
 				String pw = sc.next();
-
+				
+				memberDTO memdto = new memberDTO(id,pw);
 				joinController join = new joinController();
-				String result = join.Join(id, pw);
+				String result = join.Join(new memberDTO(id,pw)); 
 
 				// 회원정보 추가 클래스 (memberDAO)
 				// memberDAO 추가 요망
@@ -32,11 +35,14 @@ public class main {
 				System.out.println("비밀번호 입력 : ");
 				String pw = sc.next();
 
-			} else if (select == 3) {
+				loginController login = new loginController();
+				String result = login.login(id, pw);
 
-			} else if (select == 4) {
+			} else if (select == 3) { // 게임시작
 
-			} else if (select == 5) {
+			} else if (select == 4) { // 랭킹확인
+
+			} else if (select == 5) { // 종료
 				System.out.println("종료되었습니다.");
 				break;
 			} else {
