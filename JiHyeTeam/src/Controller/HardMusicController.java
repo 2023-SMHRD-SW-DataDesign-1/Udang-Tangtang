@@ -27,7 +27,7 @@ public class HardMusicController {
 
 	}
 
-	public void EasyPlay() {
+	public void HardPlay() {
 
 		int[] index = new int[hardMusicList.size()];
 
