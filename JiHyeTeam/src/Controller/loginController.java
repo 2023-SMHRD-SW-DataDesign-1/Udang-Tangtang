@@ -6,15 +6,14 @@ import memberDAO.memberDAO;
 public class loginController {
 
 	
-	memberDTO dto = new memberDTO();
 	
-	
-	public String login( String id, String pw) {
+	public String login(memberDTO memdto) {
 	    	 //유저 이용값 확인
-		System.out.println("id는 "+dto.getId());
-	    	 System.out.println("pw는 "+dto.getPw());
+		System.out.println("id는 "+memdto.getId());
+	    	 System.out.println("pw는 "+memdto.getPw());
 	    	 memberDAO dao = new memberDAO();
-	    	 String result = dao.loginMember(id, pw);
+	    	 String result = dao.loginMember(memdto);
+	    	 
 	    	 
 	    	 return result;
 	    	 

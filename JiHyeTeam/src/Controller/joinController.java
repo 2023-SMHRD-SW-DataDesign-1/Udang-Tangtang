@@ -9,12 +9,12 @@ public class joinController {
 	String pw;
 
 	// 사용자가 입력한 데이터 확인
-	public String Join(memberDTO dto) {
-		System.out.println("id 는 " + dto.getId());
-		System.out.println("pw 는 " + dto.getPw());
+	public String Join(memberDTO memdto) {
+		System.out.println("id 는 " + memdto.getId());
+		System.out.println("pw 는 " + memdto.getPw());
 
 		memberDAO dao = new memberDAO();
-		int row = dao.insertMember(id, pw);
+		int row = dao.insertMember(memdto);
 
 		String result = null;
 		if (row > 0) {
