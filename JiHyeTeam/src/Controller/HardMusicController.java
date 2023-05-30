@@ -4,11 +4,14 @@ package Controller;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.TimerTask;
 
 import javazoom.jl.player.MP3Player;
 import musicDTO.musicDTO;
 
 public class HardMusicController {
+
+
 
 	ArrayList<musicDTO> hardMusicList = new ArrayList<>();
 
@@ -33,10 +36,15 @@ public class HardMusicController {
 		int life = 3;
 		for (int i = 0; i < hardMusicList.size(); i++) {
 			
-			System.out.print("노래제목을 입력해주세요 >> ");
+			System.out.println("노래가 나옵니다. 잘들어주세요.");
 			mp3.play(hardMusicList.get(i).getMusicPath()); 
-			String answer = sc.next();
+
 			
+			System.out.print("노래제목을 입력해주세요 >> ");
+			String answer = sc.next();
+			System.out.println();
+			
+	
 			if (hardMusicList.get(i).getName().equals(answer)) {
 				System.out.println("정답입니다.");
 			} else {
