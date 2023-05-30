@@ -7,6 +7,20 @@ public class memberDTO {
 	private int score;
 	
 	
+	
+	public memberDTO(String id, String pw, int score) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.score = score;
+	}
+	
+	public memberDTO(String id, String pw) {
+		super();
+		this.id = id;
+		this.pw = pw;
+	}
+	
 	public String getId() {
 		return id;
 	}
