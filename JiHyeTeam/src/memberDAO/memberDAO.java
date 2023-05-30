@@ -74,7 +74,7 @@ public class memberDAO {
 		getCon();
 		String return_id = null;
 		try {
-			String sql = "select name from memeber where id = ? and pw = ?";
+			String sql = "select id from member where id = ? and pw = ?";
 
 			pst = conn.prepareStatement(sql);
 
