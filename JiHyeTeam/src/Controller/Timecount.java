@@ -15,7 +15,8 @@ public class Timecount {
 			@Override
 			public void run() {
 				if (count_h <= 60) {
-					System.out.print("[점수" + score_h + "] ");
+					System.out.print("[점수" + score_h + "] \r");
+					
 					count_h++;
 					score_h-=3;
 					
