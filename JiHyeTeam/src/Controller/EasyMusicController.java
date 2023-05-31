@@ -69,8 +69,8 @@ public class EasyMusicController {
 					System.out.println("[1]힌트보기 [2]다음노래로 패스 >> ");
 					choice = sc.nextInt();
 					if (choice == 1) {
-						hintpack hintpack = hint(correct, i, life, score);
-						life = hintpack.getLife();
+						hintpack hintpack2 = hint(correct, i, life, score);
+						life = hintpack2.getLife();
 					} else {
 						if (i != easyMusicList.size() - 1) {
 							System.out.println("PASS!");
