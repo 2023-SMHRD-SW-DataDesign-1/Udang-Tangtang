@@ -48,7 +48,7 @@ public class EasyMusicController {
 			mp3.play(EasyMusicList.get(i).getMusicPath());
 			System.out.print("노래제목을 입력해주세요 >> ");
 			String answer = sc.next();
-
+			
 			if (EasyMusicList.get(i).getName().equals(answer)) {
 				score += 100;
 				System.out.println("정답입니다.");
@@ -62,7 +62,8 @@ public class EasyMusicController {
 					System.out.println("[1]힌트보기 [2]다음노래로 패스 >> ");
 					choice = sc.nextInt();
 					if (choice == 1) {
-						score = hint(correct, i, life, score); // 힌트사용 메소드
+						score = hint(correct, i, life, score);
+						life--;// 힌트사용 메소드
 						}
 				
 				} else {
