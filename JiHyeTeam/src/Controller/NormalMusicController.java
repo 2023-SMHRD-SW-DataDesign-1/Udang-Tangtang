@@ -39,7 +39,7 @@ public class NormalMusicController {
       int i = 0;
       int score = 0;
       
-      while(correct <5) {
+      while(correct <10) {
   
          if (mp3.isPlaying()) {// 음악 정지
             mp3.stop();
