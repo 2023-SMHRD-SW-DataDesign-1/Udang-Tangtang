@@ -59,26 +59,10 @@ public class EasyMusicController {
 				life--;
 				System.out.println("기회가" + life + "번 남았습니다.");
 				if (life != 0) {
-					System.out.println("[1]힌트보기 [2]넘어가기 >> ");
+					System.out.println("[1]힌트보기 [2]다음노래로 패스 >> ");
 					choice = sc.nextInt();
 					if (choice == 1) {
-						score = hint1(correct, i, life, score); // 힌트사용 메소드
-
-						if (life != 0) {
-							System.out.println("[1]초성힌트보기 [2]넘어가기 >> ");
-							int choice2 = sc.nextInt();
-							if (choice2 == 1) {
-								score = hint2(correct, i, life, score);
-								if(life == 0) {
-									System.out.println("game over");
-									break;
-								}
-							}
-							} else {
-								System.out.println("game over");
-
-								break;
-							}
+						score = hint(correct, i, life, score); // 힌트사용 메소드
 						}
 				
 				} else {
@@ -94,14 +78,19 @@ public class EasyMusicController {
 				i++;
 			}
 
+			
+			
+		}
+		if(mp3.isPlaying()) {
+			mp3.stop();
 		}
 		return score;
 	}
 
-	public int hint1(int correct, int i, int life, int score) {
+	public int hint(int correct, int i, int life, int score) {
 
 		System.out.println("=======================================");
-		System.out.println(EasyMusicList.get(i).getSinger());
+		System.out.println(EasyMusicList.get(i).getSinger()+"&"+EasyMusicList.get(i).getHint());
 		System.out.println("=======================================");
 		System.out.print("노래제목을 다시 입력해주세요 >> ");
 		String answer2 = sc.next();
@@ -121,25 +110,5 @@ public class EasyMusicController {
 		return score;
 	}
 
-	public int hint2(int correct, int i, int life, int score) {
-		System.out.println("=======================================");
-		System.out.println(EasyMusicList.get(i).getHint());
-		System.out.println("=======================================");
-		System.out.print("노래제목을 다시 입력해주세요 >> ");
-		String answer3 = sc.next();
-
-		if (EasyMusicList.get(i).getName().equals(answer3)) {
-			score += 25;
-			System.out.println("정답입니다.");
-			correct++;
-
-		} else {
-			System.out.println("정답이 아닙니다.");
-			life--;
-			System.out.println("기회가" + life + "번 남았습니다.");
-
-		}
-
-		return score;
-	}
+	
 }

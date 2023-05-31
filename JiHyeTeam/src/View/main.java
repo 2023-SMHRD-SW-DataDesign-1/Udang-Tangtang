@@ -121,11 +121,16 @@ public class main {
 					EasyMusicController easy = new EasyMusicController();
 					int score = easy.EasyPlay();
 
+					if(mp3.isPlaying()) {
+						mp3.stop();
+					}
+					mp3.play("music/로비BGM.mp3");
+					
 					System.out.println("아이디 입력 : ");
 					String id = sc.next();
 					System.out.println("비밀번호 입력 : ");
 					String pw = sc.next();
-
+					
 					ScoreController scocon = new ScoreController();
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
@@ -156,6 +161,7 @@ public class main {
 					ScoreController scocon = new ScoreController();
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
+					
 
 				}else {
 					System.out.println("잘못입력하셨습니다. 로비로 돌아갑니다!");
@@ -167,6 +173,7 @@ public class main {
 				memberDAO dao = new memberDAO();
 				dao.Rankingck();
 				System.out.println(result);
+				
 
 			} else if (select == 4) { // 종료
 				System.out.println("종료되었습니다.");
