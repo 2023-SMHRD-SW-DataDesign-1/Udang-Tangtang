@@ -131,9 +131,12 @@ public class main {
 					System.out.println("비밀번호 입력 : ");
 					String pw = sc.next();
 					
+					
 					ScoreController scocon = new ScoreController();
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
+					
+					
 				} else if (choice == 2) {// 노말난이도
 
 					NormalMusicController normal = new NormalMusicController();
@@ -164,7 +167,8 @@ public class main {
 					
 
 				}else {
-					System.out.println("잘못입력하셨습니다. 로비로 돌아갑니다!");
+					System.out.println("잘못입력하셨습니다. 메인화면으로 돌아갑니다!");
+					
 				}
 
 			} else if (select == 3) {// 랭킹확인
