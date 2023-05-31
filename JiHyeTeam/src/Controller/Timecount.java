@@ -15,7 +15,6 @@ public class Timecount {
 			@Override
 			public void run() {
 				if (count_h <= 60) {
-					System.out.print("[점수" + score_h + "] \r");
 					
 					count_h++;
 					score_h-=3;
@@ -26,7 +25,7 @@ public class Timecount {
 				}
 			}
 		};
-		timer_m.schedule(m_task, 1000,1000); // 노래시작과 동시에 카운트다운시작
+		timer_m.schedule(m_task, 60000,1000); // 노래시작과 동시에 카운트다운시작
 		return score_h;
 	}
 
