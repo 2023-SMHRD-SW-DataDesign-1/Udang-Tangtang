@@ -19,12 +19,17 @@ public class HardMusicController {
 
    public HardMusicController() {
       // 곡세팅
-      hardMusicList.add(new musicDTO("잘못된만남", "김건모", "hardmusic/잘못된만남.mp3"));
-      hardMusicList.add(new musicDTO("핑계", "김건모", "hardmusic/핑계.mp3"));
-      hardMusicList.add(new musicDTO("넘버원", "보아", "hardmusic/넘버원.mp3"));
-      hardMusicList.add(new musicDTO("아시나요", "조성모", "hardmusic/아시나요.mp3"));
-      hardMusicList.add(new musicDTO("벌써일년", "브라운아이드소울", "hardmusic/벌써일년.mp3"));
-
+	   hardMusicList.add(new musicDTO("핑계", "김건모", "music/핑계.mp3"));
+	   hardMusicList.add(new musicDTO("잘못된만남", "김건모", "music/잘못된만남.mp3"));
+	   hardMusicList.add(new musicDTO("달팽이", "패닉", "music/.mp3"));
+	   hardMusicList.add(new musicDTO("나를슬프게하는사람들", "김경호", "music/나를슬프게하는사람들.mp3"));
+	   hardMusicList.add(new musicDTO("포이즌", "엄정화", "music/포이즌.mp3"));
+	   hardMusicList.add(new musicDTO("슬픈영혼식", "조성모", "music/슬픈영혼식.mp3"));
+	   hardMusicList.add(new musicDTO("아시나요", "조성모", "music/아시나요.mp3"));
+	   hardMusicList.add(new musicDTO("벌써일년", "브라운아이드소울", "music/벌써일년.mp3"));
+       hardMusicList.add(new musicDTO("넘버원", "보아", "music/넘버원.mp3"));
+       hardMusicList.add(new musicDTO("브레이크어웨이", "빅마마", "music/브레이크어웨이.mp3"));
+       
    }
 
    public int HardPlay() {
@@ -44,7 +49,7 @@ public class HardMusicController {
          String answer = sc.next();
          
          if (hardMusicList.get(i).getName().equals(answer)) {
-        	 score += 100;
+        	 score += 200;
             System.out.println("정답입니다.");
             correct++;
             i++;
