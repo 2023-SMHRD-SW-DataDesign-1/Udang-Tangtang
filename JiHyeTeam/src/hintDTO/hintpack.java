@@ -14,6 +14,28 @@ public class hintpack {
 		this.score = score;
 	}
 	
+
+	public int getScore() {
+		return score;
+	}
+
+
+	public int getCorrect() {
+		return correct;
+	}
+
+
+	public int getI() {
+		return i;
+	}
+
+
+	public int getLife() {
+		return life;
+	}
+
+	
+	
 	
 	
 

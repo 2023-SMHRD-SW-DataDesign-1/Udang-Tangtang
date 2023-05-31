@@ -1,5 +1,6 @@
 package View;
 
+
 import java.util.Scanner;
 
 import Controller.EasyMusicController;
@@ -11,6 +12,7 @@ import Controller.joinController;
 import MemberDTO.memberDTO;
 import javazoom.jl.player.MP3Player;
 import memberDAO.memberDAO;
+
 
 public class main {
 
@@ -125,7 +127,7 @@ public class main {
 						mp3.stop();
 					}
 					mp3.play("music/로비BGM.mp3");
-					
+					System.out.println("점수저장을 위해 로그인해주세요 :)");
 					System.out.println("아이디 입력 : ");
 					String id = sc.next();
 					System.out.println("비밀번호 입력 : ");
@@ -141,7 +143,12 @@ public class main {
 
 					NormalMusicController normal = new NormalMusicController();
 					int score = normal.NormalPlay();
-
+					
+					if(mp3.isPlaying()) {
+						mp3.stop();
+					}
+					mp3.play("music/로비BGM.mp3");
+					System.out.println("점수저장을 위해 로그인해주세요 :)");
 					System.out.println("아이디 입력 : ");
 					String id = sc.next();
 					System.out.println("비밀번호 입력 : ");
@@ -155,6 +162,12 @@ public class main {
 
 					HardMusicController hard = new HardMusicController();
 					int score = hard.HardPlay();
+					
+					if(mp3.isPlaying()) {
+						mp3.stop();
+					}
+					mp3.play("music/로비BGM.mp3");
+					System.out.println("점수저장을 위해 로그인해주세요 :)");
 
 					System.out.println("아이디 입력 : ");
 					String id = sc.next();
@@ -173,11 +186,42 @@ public class main {
 
 			} else if (select == 3) {// 랭킹확인
 				String result = null;
-				System.out.println("랭킹확인!");
 				memberDAO dao = new memberDAO();
-				dao.Rankingck();
-				System.out.println(result);
 				
+                
+	            System.out.println("	               .dkoooooooooooookl.");              
+	            System.out.println("	            ,oox.              .dxol.");
+	            System.out.println("	            o0cco              o0ld0;");
+	            System.out.println("	            oOO0o              oO0oo ");
+	            System.out.println("	            l0:kd.            .xk,o0,");
+	            System.out.println("	            .cxkKO            ;KKkx;");
+	            System.out.println("	             .:xKx           ;O0o,");
+	            System.out.println("	                .lxdl:;;;:ldxc.");
+	            System.out.println("	                  .;OKdcxXx,.");
+	            System.out.println("	                     KdcxXx  ");
+	            System.out.println("	                   .dk. ,Oc");
+	            System.out.println("	                   .xKo:xKl");
+	            System.out.println("	                  'dkocccdkl.");
+	            System.out.println("	              .,;dKOc,,,,;oK0l,'.");
+	            System.out.println("	             qkOooolllllllloood0dp");
+	            System.out.println("	             qOo        .      kxp");
+	            System.out.println("	             qOo     .:o1      kxp");
+	            System.out.println("	             qOo       WX      kxp");
+	            System.out.println("	             qOo       NK      kxp");
+	            System.out.println("	   ..........q0o       ol      kOp..........");
+	            System.out.println("	   Okooooooooood;      00      cdooooooooodd");
+	            System.out.println("	   0l   ...                        ...    xk");
+	            System.out.println("	   0l  .clx.                    .:8  ox.  xk");
+	            System.out.println("	   0l    oW/                      ..oo;.  xk");
+	            System.out.println("	   0l  q0o                           1Xk  xk");
+	            System.out.println("	   0c  bRRRR                     \\::;pP   xk");
+	            System.out.println("	   0k                                     Lc");
+	            System.out.println("	   clllcclcclccccccccccccccccccccccccccccclc");
+   
+	            dao.Rankingck();
+				System.out.println(result);
+				System.out.print("메인화면으로 돌아가시려면 숫자를 입력해주세요 >>");
+				sc.nextInt();
 
 			} else if (select == 4) { // 종료
 				System.out.println("종료되었습니다.");

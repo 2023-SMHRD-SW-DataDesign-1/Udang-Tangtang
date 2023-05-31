@@ -10,7 +10,7 @@ import musicDTO.musicDTO;
 
 public class EasyMusicController {
 
-	ArrayList<musicDTO> EasyMusicList = new ArrayList<>();
+	ArrayList<musicDTO> easyMusicList = new ArrayList<>();
 
 	MP3Player mp3 = new MP3Player();
 
@@ -21,16 +21,16 @@ public class EasyMusicController {
 	public EasyMusicController() {
 		// 곡세팅
 
-		EasyMusicList.add(new musicDTO("썸", "소유&정기고", "music/썸.mp3", "ㅆ"));
-		EasyMusicList.add(new musicDTO("뱅뱅뱅", "빅뱅", "music/뱅뱅뱅.mp3", "ㅂㅂㅂ"));
-		EasyMusicList.add(new musicDTO("치얼업", "트와이스", "music/cheerup.mp3", "ㅊㅇㅇ"));
-		EasyMusicList.add(new musicDTO("첫눈처럼너에게가겠다", "에일리", "music/첫눈처럼너에게가겠다.mp3", "ㅊㄴㅊㄹㄴㅇㄱㄱㄱㄷ"));
-		EasyMusicList.add(new musicDTO("사랑을했다", "아이콘", "music/사랑을했다.mp3", "ㅅㄹㅇㅎㄷ"));
-		EasyMusicList.add(new musicDTO("2002", "앤마리", "music/2002.mp3", "숫자4개"));
-		EasyMusicList.add(new musicDTO("아무노래", "지코", "music/아무노래.mp3", "ㅇㅁㄴㄹ"));
-		EasyMusicList.add(new musicDTO("셀러브리티", "아이유", "music/Celebrity.mp3", "ㅅㄹㅂㄹㅌ"));
-		EasyMusicList.add(new musicDTO("러브다이브", "아이브", "music/LOVEDIVE.mp3", "ㄹㅂㄷㅇㅂ"));
-		EasyMusicList.add(new musicDTO("디토", "뉴진스", "music/Ditto.mp3", "ㄷㅌ"));
+		easyMusicList.add(new musicDTO("썸", "소유&정기고", "music/썸.mp3", "ㅆ"));
+		easyMusicList.add(new musicDTO("뱅뱅뱅", "빅뱅", "music/뱅뱅뱅.mp3", "ㅂㅂㅂ"));
+		easyMusicList.add(new musicDTO("치얼업", "트와이스", "music/cheerup.mp3", "ㅊㅇㅇ"));
+		easyMusicList.add(new musicDTO("첫눈처럼너에게가겠다", "에일리", "music/첫눈처럼너에게가겠다.mp3", "ㅊㄴㅊㄹㄴㅇㄱㄱㄱㄷ"));
+		easyMusicList.add(new musicDTO("사랑을했다", "아이콘", "music/사랑을했다.mp3", "ㅅㄹㅇㅎㄷ"));
+		easyMusicList.add(new musicDTO("2002", "앤마리", "music/2002.mp3", "숫자4개"));
+		easyMusicList.add(new musicDTO("아무노래", "지코", "music/아무노래.mp3", "ㅇㅁㄴㄹ"));
+		easyMusicList.add(new musicDTO("셀러브리티", "아이유", "music/Celebrity.mp3", "ㅅㄹㅂㄹㅌ"));
+		easyMusicList.add(new musicDTO("러브다이브", "아이브", "music/LOVEDIVE.mp3", "ㄹㅂㄷㅇㅂ"));
+		easyMusicList.add(new musicDTO("디토", "뉴진스", "music/Ditto.mp3", "ㄷㅌ"));
 
 	}
 
@@ -40,11 +40,11 @@ public class EasyMusicController {
 		int i = 0;
 		int score = 0;
 		int choice = 0;
-		while (correct <= 10) {
-			
+		while (i < 10) {
+
 			if (life == 0) {
 				System.out.println("game over");
-				
+
 				break;
 			}
 
@@ -52,13 +52,11 @@ public class EasyMusicController {
 				mp3.stop();
 			}
 
-			
-			
-			mp3.play(EasyMusicList.get(i).getMusicPath());
+			mp3.play(easyMusicList.get(i).getMusicPath());
 			System.out.print("노래제목을 입력해주세요 >> ");
 			String answer = sc.next();
-			
-			if (EasyMusicList.get(i).getName().equals(answer)) {
+
+			if (easyMusicList.get(i).getName().equals(answer)) {
 				score += 100;
 				System.out.println("정답입니다.");
 				correct++;
@@ -73,22 +71,21 @@ public class EasyMusicController {
 					if (choice == 1) {
 						hintpack hintpack = hint(correct, i, life, score);
 
-				} else {
-					System.out.println();
-
+					} else {
+						if (i != easyMusicList.size() - 1) {
+							System.out.println("PASS!");
+						} else {
+							System.out.println("모든문제가 출제되었습니다! 게임종료!");
+						}
+					}
 				}
-				
-				
+				i++;
 
-				}
-			i++;
+			}
 
-	}
-
-
-		if (mp3.isPlaying()) {
-			mp3.stop();
-		}
+			if (mp3.isPlaying()) {
+				mp3.stop();
+			}
 		}
 		return score;
 	}
@@ -96,29 +93,34 @@ public class EasyMusicController {
 	public hintpack hint(int correct, int i, int life, int score) {
 
 		hintpack hintpack = new hintpack(correct, i, life, score);
-		
+
 		System.out.println("=======================================");
-		System.out.println(EasyMusicList.get(i).getSinger() + "&" + EasyMusicList.get(i).getHint());
+		System.out.println(easyMusicList.get(i).getSinger() + "-" + easyMusicList.get(i).getHint());
 		System.out.println("=======================================");
 		System.out.print("노래제목을 다시 입력해주세요 >> ");
 		String answer2 = sc.next();
 
-		if (EasyMusicList.get(i).getName().equals(answer2)) {
+		if (easyMusicList.get(i).getName().equals(answer2)) {
 			score += 50;
 			System.out.println("정답입니다.");
 			correct++;
+			if(i == easyMusicList.size()-1) {
+				System.out.println("모든문제가 출제되었습니다! 게임종료!");
+			}
 
 		} else {
-			System.out.println("정답이 아닙니다.");
-			life--;
-			System.out.println("기회가" + life + "번 남았습니다.");
+			if (i != easyMusicList.size() - 1) {
+				System.out.println("정답이 아닙니다.");
+				life--;
+				System.out.println("기회가" + life + "번 남았습니다.");
+			}else {
+				System.out.println("모든문제 출제완료!");
+				System.out.println("=======================================");
+			}
 
 		}
 
-		
 		return hintpack;
 	}
-	
-		
 
 }
