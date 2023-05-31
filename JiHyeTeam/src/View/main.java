@@ -42,6 +42,7 @@ public class main {
 
 
 			} else if (select == 3) { // 게임시작
+				
 				HardMusicController hcon = new HardMusicController();
 				hcon.HardPlay();
 			} else if (select == 4) {

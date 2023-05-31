@@ -37,6 +37,7 @@ public class HardMusicController {
 			mp3.play(hardMusicList.get(i).getMusicPath()); 
 			String answer = sc.next();
 			
+			
 			if (hardMusicList.get(i).getName().equals(answer)) {
 				System.out.println("정답입니다.");
 			} else {
