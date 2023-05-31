@@ -10,6 +10,7 @@ import Controller.joinController;
 import Controller.loginController;
 //github.com/2023-SMHRD-SW-DataDesign-1/JiHye-Team.git
 import MemberDTO.memberDTO;
+import javazoom.jl.player.MP3Player;
 import memberDAO.memberDAO;
 
 public class main {
@@ -17,8 +18,12 @@ public class main {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-
+		MP3Player mp3 = new MP3Player();
 		while (true) {
+			if(mp3.isPlaying()) {
+				mp3.stop();
+			}
+			mp3.play("music/로비BGM.mp3");
 			System.out.println("........ ............. :;.........................");
 			System.out.println(".......~#$$#-  ........*=.........................");
 			System.out.println("......!,. .-:;!.... .,*:!.........................");
