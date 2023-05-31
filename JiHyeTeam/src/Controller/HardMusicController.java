@@ -30,6 +30,9 @@ public class HardMusicController {
 		hardMusicList.add(new musicDTO("벌써일년", "브라운아이드소울", "hardmusic/벌써일년.mp3"));
 
 	}
+	
+
+	
 
 	public void HardPlay() {
 
@@ -47,6 +50,7 @@ public class HardMusicController {
 
 			if (hardMusicList.get(i).getName().equals(answer)) {
 				System.out.println("정답입니다.");
+				
 			} else {
 				System.out.println("정답이 아닙니다.");
 				life--;
