@@ -38,13 +38,14 @@ public class HardMusicController {
 
 		int life = 3;
 		for (int i = 0; i < hardMusicList.size(); i++) {
-
+			Timecount tc = new Timecount();
+			
 			if(mp3.isPlaying()) {
 				mp3.stop();
+				
 			}
 
 			
-			Timecount tc = new Timecount();
 	        tc.timer();
 
 			System.out.println("노래가 나옵니다. 잘들어주세요.");

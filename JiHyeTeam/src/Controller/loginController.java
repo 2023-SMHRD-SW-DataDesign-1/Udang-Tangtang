@@ -8,15 +8,11 @@ public class loginController {
 	
 	
 	public String login(memberDTO memdto) {
-		System.out.println("id는 "+memdto.getId());
-	    	 System.out.println("pw는 "+memdto.getPw());
 	    	 memberDAO dao = new memberDAO();
 	    	 String result = dao.loginMember(memdto);
-	    	 
-	    	 
-	    	 return result;
-	    	 
-	     } 
+	    	
+	    	 return result+"님이 로그인하셨습니다.";
+	}
 	
 	
 }// class

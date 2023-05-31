@@ -16,7 +16,7 @@ public class ScoreController {
 			result = memdto.getId()+"님의 점수는"+score+"입니다.";
 		} else {
 			System.out.println("");
-			result = "점수가 저장되지 않았습니다.";
+			result = "id나 pw가 틀렸습니다. 다시입력해주세요.";
 		}
 		return result;
 	}

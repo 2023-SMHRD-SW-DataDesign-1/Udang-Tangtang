@@ -98,11 +98,12 @@ public class memberDAO {
 		getCon();
 		int cnt = 0;
 		try {
-			String sql = "update member set score = ? where id = ?";
+			String sql = "update member set score = ? where id = ? pw = ?";
 			pst =  conn.prepareStatement(sql);
 			
 			pst.setInt(1,score);
 			pst.setString(2,memdto.getId());
+			pst.setString(3,memdto.getPw());
 			
 			cnt = pst.executeUpdate();
 			
