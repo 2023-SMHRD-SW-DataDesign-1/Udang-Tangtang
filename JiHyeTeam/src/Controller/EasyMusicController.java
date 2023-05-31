@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import hintDTO.hintpack;
 import javazoom.jl.player.MP3Player;
 import musicDTO.musicDTO;
 
@@ -39,12 +40,20 @@ public class EasyMusicController {
 		int i = 0;
 		int score = 0;
 		int choice = 0;
-		while (correct < 10) {
+		while (correct <= 10) {
+			
+			if (life == 0) {
+				System.out.println("game over");
+				
+				break;
+			}
 
 			if (mp3.isPlaying()) {// 음악 정지
 				mp3.stop();
 			}
 
+			
+			
 			mp3.play(EasyMusicList.get(i).getMusicPath());
 			System.out.print("노래제목을 입력해주세요 >> ");
 			String answer = sc.next();
@@ -62,36 +71,34 @@ public class EasyMusicController {
 					System.out.println("[1]힌트보기 [2]다음노래로 패스 >> ");
 					choice = sc.nextInt();
 					if (choice == 1) {
-						score = hint(correct, i, life, score);
-						life--;// 힌트사용 메소드
-						}
-				
+						hintpack hintpack = hint(correct, i, life, score);
+
 				} else {
 					System.out.println();
 
 				}
-				if (life == 0) {
-					System.out.println("game over");
-
-					break;
+				
+				
 
 				}
-				i++;
-			}
+			i++;
 
-			
-			
-		}
-		if(mp3.isPlaying()) {
+	}
+
+
+		if (mp3.isPlaying()) {
 			mp3.stop();
+		}
 		}
 		return score;
 	}
 
-	public int hint(int correct, int i, int life, int score) {
+	public hintpack hint(int correct, int i, int life, int score) {
 
+		hintpack hintpack = new hintpack(correct, i, life, score);
+		
 		System.out.println("=======================================");
-		System.out.println(EasyMusicList.get(i).getSinger()+"&"+EasyMusicList.get(i).getHint());
+		System.out.println(EasyMusicList.get(i).getSinger() + "&" + EasyMusicList.get(i).getHint());
 		System.out.println("=======================================");
 		System.out.print("노래제목을 다시 입력해주세요 >> ");
 		String answer2 = sc.next();
@@ -107,9 +114,11 @@ public class EasyMusicController {
 			System.out.println("기회가" + life + "번 남았습니다.");
 
 		}
-	
-		return score;
-	}
 
+		
+		return hintpack;
+	}
 	
+		
+
 }
