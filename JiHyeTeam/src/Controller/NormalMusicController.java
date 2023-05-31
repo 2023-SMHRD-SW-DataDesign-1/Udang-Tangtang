@@ -34,6 +34,8 @@ public class NormalMusicController {
 		int life = 3;
 		for (int i = 0; i < NormalMusicList.size(); i++) {
 			
+			Timecount tcnomal = new Timecount();
+			tcnomal.nomaltimer();
 			System.out.print("노래제목을 입력해주세요 >> ");
 			mp3.play(NormalMusicList.get(i).getMusicPath()); 
 			String answer = sc.next();

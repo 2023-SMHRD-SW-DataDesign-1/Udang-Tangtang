@@ -3,7 +3,9 @@ package View;
 import java.sql.Time;
 import java.util.Scanner;
 
+import Controller.EasyMusicController;
 import Controller.HardMusicController;
+import Controller.NormalMusicController;
 import Controller.Timecount;
 import Controller.joinController;
 import Controller.loginController;
@@ -44,10 +46,19 @@ public class main {
 
 			
          } else if (select == 3) { // 게임시작
-    	   Timecount tc = new Timecount();
-           tc.timer();
-            HardMusicController hcon = new HardMusicController();
-            hcon.HardPlay();
+        	 System.out.print("난이도 선택 : [1] 상  [2] 중  [3] 하 >> ");
+        	 int choice = sc.nextInt();
+        	 if(choice == 1) {
+        		 HardMusicController hcon = new HardMusicController();
+        		 hcon.HardPlay();
+        	 } else if(choice == 2) {
+        		 NormalMusicController ncon = new NormalMusicController();
+        		 ncon.NormalPlay();
+        	 } else {
+        		 EasyMusicController econ = new EasyMusicController();
+        		 econ.EasyPlay();
+        	 }
+    	
          
             
          } else if (select == 4) {
