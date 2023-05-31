@@ -1,102 +1,75 @@
 package View;
 
-import java.sql.Time;
+
+
 import java.util.Scanner;
 
-import Controller.EasyMusicController;
 import Controller.HardMusicController;
-import Controller.NormalMusicController;
 import Controller.ScoreController;
-import Controller.Timecount;
 import Controller.joinController;
 import Controller.loginController;
+//github.com/2023-SMHRD-SW-DataDesign-1/JiHye-Team.git
 import MemberDTO.memberDTO;
 import memberDAO.memberDAO;
 
 public class main {
 
-	public static void main(String[] args) {
+   public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+      Scanner sc = new Scanner(System.in);
 
-		System.out.println("=======노래맞추기게임======");
-		while (true) {
-			System.out.print("[1] 회원가입 [2] 로그인 [3] 게임시작 [4] 랭킹확인 [5] 종료 >> ");
-			int select = sc.nextInt();
-			if (select == 1) { // 회원가입
-				System.out.print("아이디 입력 : ");
-				String id = sc.next();
-				System.out.print("비밀번호 입력 : ");
-				String pw = sc.next();
+      while (true) {
+    	  System.out.println("=======회원가입======");
+    	  System.out.print("[1] 회원가입 [2] 게임시작 [3] 랭킹확인 [4] 종료 >> ");
+    	  int select = sc.nextInt();
+         if (select == 1) { // 회원가입
+            System.out.print("아이디 입력 : ");
+            String id = sc.next();
+            System.out.print("비밀번호 입력 : ");
+            String pw = sc.next();
+            
+            memberDTO memdto = new memberDTO(id,pw);
+            joinController join = new joinController();
+            join.Join(memdto);
 
-				memberDTO memdto = new memberDTO(id, pw);
-				joinController join = new joinController();
-				String result = join.Join(new memberDTO(id, pw));
 
-				// 회원정보 추가 클래스 (memberDAO)
-				// memberDAO 추가 요망
+            // 회원정보 추가 클래스 (memberDAO)
+            // memberDAO 추가 요망
 
-			} else if (select == 2) { // 로그인
-				System.out.println("아이디 입력 : ");
-				String id = sc.next();
-				System.out.println("비밀번호 입력 : ");
-				String pw = sc.next();
+         }  else if (select == 2) { // 게임시작
+        	 
+            System.out.print("난이도 선택 [1] 상   [2] 중   [3] 하 >> ");
+            int choice = sc.nextInt();
+            HardMusicController hard = new HardMusicController();
+            int score = hard.HardPlay();
+            
+            System.out.println("아이디 입력 : ");
+            String id = sc.next();
+            System.out.println("비밀번호 입력 : ");
+            String pw = sc.next();
+            
+            loginController login = new loginController();
+            memberDTO loginmemDTO = login.login(new memberDTO(id, pw));
+            
+            ScoreController scocon = new ScoreController();
+            scocon.hardScoreController(loginmemDTO, score);
+            
+           
+            
+         } else if (select == 3) {
+            String result = null;
+            System.out.println("순위를 확인합니다.");
+            memberDAO dao = new memberDAO();
+            result = dao.Rankingck();
+            System.out.println(result);
 
-				loginController login = new loginController();
-				String result = login.login(new memberDTO(id, pw));
-
-			} else if (select == 3) { // 게임시작
-				System.out.print("난이도 선택 : [1] 상  [2] 중  [3] 하 >> ");
-				int choice = sc.nextInt();
-
-				if (choice == 1) {
-					HardMusicController hcon = new HardMusicController();
-					hcon.HardPlay();
-					Timecount timeCount = new Timecount();
-					int score = timeCount.timer();
-
-					System.out.println("점수 저장을 위해 아이디 비밀번호를 입력해주세요");
-					System.out.println("아이디 입력 : ");
-					String id = sc.next();
-					System.out.println("비밀번호 입력 : ");
-					String pw = sc.next();
-
-					loginController login = new loginController();
-					String result = login.login(new memberDTO(id, pw));
-
-					ScoreController scocon = new ScoreController();
-					String a = scocon.hardScoreController(new memberDTO(id, pw), score);
-					while (a.equals("id나 pw가 틀렸습니다. 다시입력해주세요.")) {
-							System.out.println("아이디 입력 : ");
-							String id2 = sc.next();
-							System.out.println("비밀번호 입력 : ");
-							String pw2 = sc.next();
-							a = scocon.hardScoreController(new memberDTO(id2, pw2), score);
-						} 
-					System.out.println(a);	
-					
-				} else if (choice == 2) {
-					NormalMusicController ncon = new NormalMusicController();
-					ncon.NormalPlay();
-				} else {
-					EasyMusicController econ = new EasyMusicController();
-					econ.EasyPlay();
-				}
-
-			} else if (select == 4) {
-				String result = null;
-				System.out.println("순위를 확인합니다.");
-				memberDAO dao = new memberDAO();
-				result = dao.Rankingck();
-				System.out.println(result);
-
-			} else if (select == 5) { // 종료
-				System.out.println("종료되었습니다.");
-				break;
-			} else {
-				System.out.println("다시 입력해주세요.");
-			}
-		} // while
-	}// main
+         } else if (select == 4) { // 종료
+            System.out.println("종료되었습니다.");
+            break;
+         } else {
+            System.out.println("다시 입력해주세요.");
+         }
+      } // while
+   }// main
 
 }// class

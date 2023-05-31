@@ -5,14 +5,19 @@ import memberDAO.memberDAO;
 
 public class loginController {
 
-	
-	
-	public String login(memberDTO memdto) {
-	    	 memberDAO dao = new memberDAO();
-	    	 String result = dao.loginMember(memdto);
-	    	
-	    	 return result+"님이 로그인하셨습니다.";
-	}
-	
-	
+   
+   
+   public memberDTO login(memberDTO memdto) {
+           //유저 이용값 확인
+           
+           memberDAO dao = new memberDAO();
+           dao.loginMember(memdto);
+           
+           System.out.print(memdto.getId()+"님 환영합니다");
+           
+           return memdto;
+           
+        } 
+   
+   
 }// class
