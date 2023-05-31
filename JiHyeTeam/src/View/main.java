@@ -58,8 +58,9 @@ public class main {
         		 EasyMusicController econ = new EasyMusicController();
         		 econ.EasyPlay();
         	 }
-    	
-         
+        	 
+        	 
+        	 
             
          } else if (select == 4) {
             String result = null;
@@ -67,6 +68,7 @@ public class main {
             memberDAO dao = new memberDAO();
             result = dao.Rankingck();
             System.out.println(result);
+        
 
          } else if (select == 5) { // 종료
             System.out.println("종료되었습니다.");
