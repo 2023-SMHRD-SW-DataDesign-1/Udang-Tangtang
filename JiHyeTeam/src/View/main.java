@@ -6,6 +6,7 @@ import java.util.Scanner;
 import Controller.EasyMusicController;
 import Controller.HardMusicController;
 import Controller.NormalMusicController;
+import Controller.ScoreController;
 import Controller.Timecount;
 import Controller.joinController;
 import Controller.loginController;
@@ -48,9 +49,26 @@ public class main {
          } else if (select == 3) { // 게임시작
         	 System.out.print("난이도 선택 : [1] 상  [2] 중  [3] 하 >> ");
         	 int choice = sc.nextInt();
+        	 
         	 if(choice == 1) {
         		 HardMusicController hcon = new HardMusicController();
         		 hcon.HardPlay();
+        		 Timecount timeCount = new Timecount();
+        		 int score = timeCount.timer();
+        		 ScoreController scorecon = new ScoreController();
+        		 scorecon.hardScoreController(null, score);
+        		 System.out.println("점수 저장을 위해 아이디 비밀번호를 입력해주세요");
+        		 System.out.println("아이디 입력 : ");
+                 String id = sc.next();
+                 System.out.println("비밀번호 입력 : ");
+                 String pw = sc.next();
+
+                 loginController login = new loginController();
+                 String result = login.login(new memberDTO(id,pw));
+                 ScoreController scocon = new ScoreController();
+                 String a = scocon.hardScoreController(new memberDTO(id,pw), score);
+        		 System.out.println(a);		  
+        		 
         	 } else if(choice == 2) {
         		 NormalMusicController ncon = new NormalMusicController();
         		 ncon.NormalPlay();

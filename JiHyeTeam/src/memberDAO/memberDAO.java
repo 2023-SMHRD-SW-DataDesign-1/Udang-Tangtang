@@ -94,7 +94,27 @@ public class memberDAO {
 		return return_id;
 	}
 	
-	
+	public int insertScore(memberDTO memdto, int score) {
+		getCon();
+		int cnt = 0;
+		try {
+			String sql = "update member set score = ? where id = ?";
+			pst =  conn.prepareStatement(sql);
+			
+			pst.setInt(1,score);
+			pst.setString(2,memdto.getId());
+			
+			cnt = pst.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			getClose();
+		}
+		return cnt;
+		
+	}
 	
 	public String Rankingck() {
 		String result = null;
