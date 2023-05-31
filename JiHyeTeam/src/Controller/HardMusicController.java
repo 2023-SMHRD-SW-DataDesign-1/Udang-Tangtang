@@ -44,7 +44,7 @@ public class HardMusicController {
             mp3.stop();
          }
          
-         hardMusicList.get(i).getMusicPath();
+         mp3.play(hardMusicList.get(i).getMusicPath());
          System.out.print("노래제목을 입력해주세요 >> ");
          String answer = sc.next();
          
