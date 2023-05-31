@@ -19,7 +19,7 @@ public class main {
       Scanner sc = new Scanner(System.in);
 
       while (true) {
-    	  System.out.println("=======회원가입======");
+    	  System.out.println("=======딩가딩가======");
     	  System.out.print("[1] 회원가입 [2] 게임시작 [3] 랭킹확인 [4] 종료 >> ");
     	  int select = sc.nextInt();
          if (select == 1) { // 회원가입
@@ -48,19 +48,17 @@ public class main {
             System.out.println("비밀번호 입력 : ");
             String pw = sc.next();
             
-            loginController login = new loginController();
-            memberDTO loginmemDTO = login.login(new memberDTO(id, pw));
             
             ScoreController scocon = new ScoreController();
-            scocon.hardScoreController(loginmemDTO, score);
-            
+            String result = scocon.hardScoreController(new memberDTO(id,pw), score);
+            System.out.println(result);
            
             
          } else if (select == 3) {
             String result = null;
             System.out.println("순위를 확인합니다.");
             memberDAO dao = new memberDAO();
-            result = dao.Rankingck();
+            dao.Rankingck();
             System.out.println(result);
 
          } else if (select == 4) { // 종료

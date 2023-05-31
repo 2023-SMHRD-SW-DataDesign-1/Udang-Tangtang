@@ -28,8 +28,6 @@ public class HardMusicController {
    }
 
    public int HardPlay() {
-     
-     
       int life = 3;
       int correct = 0;
       int i = 0;
@@ -41,15 +39,15 @@ public class HardMusicController {
             mp3.stop();
          }
          
-         
          hardMusicList.get(i).getMusicPath();
          System.out.print("노래제목을 입력해주세요 >> ");
          String answer = sc.next();
          
          if (hardMusicList.get(i).getName().equals(answer)) {
+        	 score += 100;
             System.out.println("정답입니다.");
             correct++;
-            score +=100;
+            i++;
          } else {
             System.out.println("정답이 아닙니다.");
             life--;
@@ -60,10 +58,10 @@ public class HardMusicController {
                break;
             }
          }
-         i++;
+         
 
       }
-   
       return score;
+   
    }
 }

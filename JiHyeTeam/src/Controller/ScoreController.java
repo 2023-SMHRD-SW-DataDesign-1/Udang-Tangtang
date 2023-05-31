@@ -12,9 +12,9 @@ public class ScoreController {
 
 		String result = null;
 		if (cnt > 0) {
-			result = memdto.getId()+"님의 점수는"+memdto.getScore()+"입니다.";
+			result = memdto.getId()+"님의 점수가 저장되었습니다! 랭킹을 확인해주세요 :)";
 		} else {
-			result = "점수가 저장되지 않았습니다.";
+			result = "아이디와 비밀번호가 틀려서 점수가 저장되지 않았습니다.";
 		}
 		return result;
 	}
