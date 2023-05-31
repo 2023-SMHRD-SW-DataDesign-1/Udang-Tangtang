@@ -19,16 +19,16 @@ public class HardMusicController {
 
    public HardMusicController() {
       // 곡세팅
-	   hardMusicList.add(new musicDTO("핑계", "김건모", "music/핑계.mp3"));
-	   hardMusicList.add(new musicDTO("잘못된만남", "김건모", "music/잘못된만남.mp3"));
-	   hardMusicList.add(new musicDTO("달팽이", "패닉", "music/.mp3"));
-	   hardMusicList.add(new musicDTO("나를슬프게하는사람들", "김경호", "music/나를슬프게하는사람들.mp3"));
-	   hardMusicList.add(new musicDTO("포이즌", "엄정화", "music/포이즌.mp3"));
-	   hardMusicList.add(new musicDTO("슬픈영혼식", "조성모", "music/슬픈영혼식.mp3"));
-	   hardMusicList.add(new musicDTO("아시나요", "조성모", "music/아시나요.mp3"));
-	   hardMusicList.add(new musicDTO("벌써일년", "브라운아이드소울", "music/벌써일년.mp3"));
-       hardMusicList.add(new musicDTO("넘버원", "보아", "music/넘버원.mp3"));
-       hardMusicList.add(new musicDTO("브레이크어웨이", "빅마마", "music/브레이크어웨이.mp3"));
+	   hardMusicList.add(new musicDTO("핑계", "김건모", "music/핑계.mp3","ㅍㄱ"));
+	   hardMusicList.add(new musicDTO("잘못된만남", "김건모", "music/잘못된만남.mp3","ㅈㅁㄷㅁㄴ"));
+	   hardMusicList.add(new musicDTO("달팽이", "패닉", "music/달팽이.mp3","ㄷㅍㅇ"));
+	   hardMusicList.add(new musicDTO("나를슬프게하는사람들", "김경호", "music/나를슬프게하는사람들.mp3","ㄴㄹㅅㅍㄱㅎㄴㅅㄹㄷ"));
+	   hardMusicList.add(new musicDTO("포이즌", "엄정화", "music/포이즌.mp3","ㅍㅇㅈ"));
+	   hardMusicList.add(new musicDTO("슬픈영혼식", "조성모", "music/슬픈영혼식.mp3","ㅅㅍㅇㅎㅅ"));
+	   hardMusicList.add(new musicDTO("아시나요", "조성모", "music/아시나요.mp3","ㅇㅅㄴㅇ"));
+	   hardMusicList.add(new musicDTO("벌써일년", "브라운아이드소울", "music/벌써일년.mp3","ㅂㅆㅇㄴ"));
+       hardMusicList.add(new musicDTO("넘버원", "보아", "music/넘버원.mp3","ㄴㅂㅇ"));
+       hardMusicList.add(new musicDTO("브레이크어웨이", "빅마마", "music/브레이크어웨이.mp3","ㅂㄹㅇㅋㅇㅇㅇ"));
        
    }
 

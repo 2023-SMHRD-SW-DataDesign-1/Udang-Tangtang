@@ -110,9 +110,13 @@ public class main {
 
 			} else if (select == 2) { // 게임 시작
 
+				
 				System.out.print("난이도 선택 [1] Easy   [2] Normal   [3] Hard >> ");
 				int choice = sc.nextInt();
 
+				if(mp3.isPlaying()) {
+					mp3.stop();
+				}
 				if (choice == 1) {// 이지난이도
 					EasyMusicController easy = new EasyMusicController();
 					int score = easy.EasyPlay();

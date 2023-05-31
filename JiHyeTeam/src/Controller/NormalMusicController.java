@@ -20,16 +20,16 @@ public class NormalMusicController {
    public NormalMusicController() {
       // 곡세팅
 	   
-       NormalMusicList.add(new musicDTO("친구여", "조피디", "music/친구여.mp3"));
-       NormalMusicList.add(new musicDTO("죄와벌", "SG워너비", "music/죄와벌.mp3"));
-       NormalMusicList.add(new musicDTO("내사람", "SG워너비", "music/내사람.mp3"));
-       NormalMusicList.add(new musicDTO("미인", "이기찬", "music/미인.mp3"));
-       NormalMusicList.add(new musicDTO("쏘핫", "원더걸스", "music/SoHot.mp3"));
-       NormalMusicList.add(new musicDTO("쥐", "소녀시대", "music/Gee.mp3"));
-       NormalMusicList.add(new musicDTO("배드걸굿걸", "소녀시대", "music/BadGirlGoodGirl.mp3"));
-       NormalMusicList.add(new musicDTO("롤리폴리", "티아라", "music/RolyPoly.mp3"));
-       NormalMusicList.add(new musicDTO("강남스타일", "싸이", "music/강남스타일.mp3"));
-       NormalMusicList.add(new musicDTO("자니", "프라이머리", "music/자니.mp3"));
+       NormalMusicList.add(new musicDTO("친구여", "조피디", "music/친구여.mp3","ㅊㄱㅇ"));
+       NormalMusicList.add(new musicDTO("죄와벌", "SG워너비", "music/죄와벌.mp3","ㅈㅇㅂ"));
+       NormalMusicList.add(new musicDTO("내사람", "SG워너비", "music/내사람.mp3","ㄴㅅㄹ"));
+       NormalMusicList.add(new musicDTO("미인", "이기찬", "music/미인.mp3","ㅁㅇ"));
+       NormalMusicList.add(new musicDTO("쏘핫", "원더걸스", "music/SoHot.mp3","ㅆㅎ"));
+       NormalMusicList.add(new musicDTO("쥐", "소녀시대", "music/Gee.mp3","ㅈ"));
+       NormalMusicList.add(new musicDTO("배드걸굿걸", "소녀시대", "music/BadGirlGoodGirl.mp3","ㅂㄷㄱㄱㄱ"));
+       NormalMusicList.add(new musicDTO("롤리폴리", "티아라", "music/RolyPoly.mp3","ㄹㄹㅍㄹ"));
+       NormalMusicList.add(new musicDTO("강남스타일", "싸이", "music/강남스타일.mp3","ㄱㄴㅅㅌㅇ"));
+       NormalMusicList.add(new musicDTO("자니", "프라이머리", "music/자니.mp3","ㅈㄴ"));
       
    }
 
