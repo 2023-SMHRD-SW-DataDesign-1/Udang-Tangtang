@@ -100,7 +100,7 @@ public class memberDAO {
 		String result = null;
 		getCon();
 		try {
-		String sql = "select id, rownum from(select * from member order by score desc) where rownum <= 10";
+		String sql = "select id, rownum, score from(select * from member order by score desc) where rownum <= 10";
 		
 		pst = conn.prepareStatement(sql);
 		
