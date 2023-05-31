@@ -23,9 +23,7 @@ public class memberDAO {
 
 			conn = DriverManager.getConnection(dburl, dbuser, dbpw);
 
-			if (conn != null) {
-				System.out.println("♥");
-			} else {
+			if (conn == null) {
 				System.out.println("연결 실패");
 			}
 		} catch (ClassNotFoundException e) {
@@ -148,7 +146,7 @@ public class memberDAO {
 				String rownum = rs.getString("rownum");
 				int score = rs.getInt("score");
 				
-				System.out.println(rownum+" "+id+" "+score);
+				System.out.println(rownum+"등 "+id+" "+score+"점");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -158,5 +156,31 @@ public class memberDAO {
 		}
 
 	}
+	
+	public String Rankck1() {
+		String result = null;
+		getCon();
+		try {
+			String sql = "select rownum, id, score from(select * from member order by score desc) where rownum = 1";
+
+			pst = conn.prepareStatement(sql);
+
+			rs = pst.executeQuery();
+
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String rownum = rs.getString("rownum");
+				int score = rs.getInt("score");
+				result = id+"  "+score+"점";
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+
+		} finally {
+			getClose();
+		}
+		return result;
+	}
+
 
 }

@@ -70,7 +70,7 @@ public class EasyMusicController {
 					choice = sc.nextInt();
 					if (choice == 1) {
 						hintpack hintpack = hint(correct, i, life, score);
-
+						life = hintpack.getLife();
 					} else {
 						if (i != easyMusicList.size() - 1) {
 							System.out.println("PASS!");
@@ -80,6 +80,7 @@ public class EasyMusicController {
 					}
 				}
 				i++;
+				
 
 			}
 
@@ -113,13 +114,14 @@ public class EasyMusicController {
 				System.out.println("정답이 아닙니다.");
 				life--;
 				System.out.println("기회가" + life + "번 남았습니다.");
+				
 			}else {
 				System.out.println("모든문제 출제완료!");
 				System.out.println("=======================================");
 			}
 
 		}
-
+		hintpack = new hintpack(correct, i, life, score);
 		return hintpack;
 	}
 

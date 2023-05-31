@@ -83,7 +83,11 @@ public class NormalMusicController {
 					}
 				}
 				i++;
+				if (life == 0) {
+					System.out.println("game over");
 
+					break;
+				}
 			}
 
 			if (mp3.isPlaying()) {
@@ -104,7 +108,7 @@ public class NormalMusicController {
 		String answer2 = sc.next();
 
 		if (normalMusicList.get(i).getName().equals(answer2)) {
-			score += 70;
+			score += 75;
 			System.out.println("정답입니다.");
 			correct++;
 
@@ -113,6 +117,7 @@ public class NormalMusicController {
 				System.out.println("정답이 아닙니다.");
 				life--;
 				System.out.println("기회가" + life + "번 남았습니다.");
+				
 			} else {
 				System.out.println("모든문제 출제완료!");
 				System.out.println("=======================================");

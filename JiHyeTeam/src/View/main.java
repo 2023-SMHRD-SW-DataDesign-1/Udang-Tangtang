@@ -137,6 +137,9 @@ public class main {
 					ScoreController scocon = new ScoreController();
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
+					System.out.println();
+					System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
+					sc.nextInt();
 					
 					
 				} else if (choice == 2) {// 노말난이도
@@ -157,6 +160,9 @@ public class main {
 					ScoreController scocon = new ScoreController();
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
+					System.out.println();
+					System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
+					sc.nextInt();
 
 				} else if (choice == 3) {// 하드난이도
 
@@ -177,6 +183,10 @@ public class main {
 					ScoreController scocon = new ScoreController();
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
+					System.out.println();
+					System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
+					sc.nextInt();
+			
 					
 
 				}else {
@@ -189,38 +199,32 @@ public class main {
 				memberDAO dao = new memberDAO();
 				
                 
-	            System.out.println("	               .dkoooooooooooookl.");              
-	            System.out.println("	            ,oox.              .dxol.");
-	            System.out.println("	            o0cco              o0ld0;");
-	            System.out.println("	            oOO0o              oO0oo ");
-	            System.out.println("	            l0:kd.            .xk,o0,");
-	            System.out.println("	            .cxkKO            ;KKkx;");
-	            System.out.println("	             .:xKx           ;O0o,");
-	            System.out.println("	                .lxdl:;;;:ldxc.");
-	            System.out.println("	                  .;OKdcxXx,.");
-	            System.out.println("	                     KdcxXx  ");
-	            System.out.println("	                   .dk. ,Oc");
-	            System.out.println("	                   .xKo:xKl");
-	            System.out.println("	                  'dkocccdkl.");
-	            System.out.println("	              .,;dKOc,,,,;oK0l,'.");
-	            System.out.println("	             qkOooolllllllloood0dp");
-	            System.out.println("	             qOo        .      kxp");
-	            System.out.println("	             qOo     .:o1      kxp");
-	            System.out.println("	             qOo       WX      kxp");
-	            System.out.println("	             qOo       NK      kxp");
-	            System.out.println("	   ..........q0o       ol      kOp..........");
-	            System.out.println("	   Okooooooooood;      00      cdooooooooodd");
-	            System.out.println("	   0l   ...                        ...    xk");
-	            System.out.println("	   0l  .clx.                    .:8  ox.  xk");
-	            System.out.println("	   0l    oW/                      ..oo;.  xk");
-	            System.out.println("	   0l  q0o                           1Xk  xk");
-	            System.out.println("	   0c  bRRRR                     \\::;pP   xk");
-	            System.out.println("	   0k                                     Lc");
-	            System.out.println("	   clllcclcclccccccccccccccccccccccccccccclc");
-   
+	            System.out.println("	          .dkoooooooooooookl.");              
+	            System.out.println("	        ,oox.              .dxol.");
+	            System.out.println("	        o0cco               0ld0;");
+	            System.out.println("	        oOO0o               O0oo ");
+	            System.out.println("	        l0:kd.             .kao0,");
+	            System.out.println("	        .cxkKO            .KKkx;");
+	            System.out.println("	         .:xKx           ;O0o,");
+	            System.out.println("	            .lxdl:;;;:ldxc.");
+	            System.out.println("	              .;OKdcxXx,.");
+	            System.out.println("	                 KdcxXx  ");
+	            System.out.println("	               .dk. ,Oc");
+	            System.out.println("	               .xKo:xKl.");
+	            System.out.println("	              'dkocccdkl.");
+	            System.out.println("	          .,;dKOc,,,,;oK0l;.,");
+	            System.out.println("	         qkOooolllllllloood0dp");
+	            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	            System.out.println("                      ☆1위☆                      ");
+	            System.out.println();
+	            System.out.println("                    "+dao.Rankck1());
+	            System.out.println();
+	            System.out.println();
+	            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	            System.out.println();
 	            dao.Rankingck();
-				System.out.println(result);
-				System.out.print("메인화면으로 돌아가시려면 숫자를 입력해주세요 >>");
+	            System.out.println();
+				System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
 				sc.nextInt();
 
 			} else if (select == 4) { // 종료
