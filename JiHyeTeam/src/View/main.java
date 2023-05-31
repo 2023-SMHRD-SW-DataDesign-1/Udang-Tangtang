@@ -7,8 +7,7 @@ import Controller.HardMusicController;
 import Controller.NormalMusicController;
 import Controller.ScoreController;
 import Controller.joinController;
-import Controller.loginController;
-//github.com/2023-SMHRD-SW-DataDesign-1/JiHye-Team.git
+
 import MemberDTO.memberDTO;
 import javazoom.jl.player.MP3Player;
 import memberDAO.memberDAO;
@@ -94,7 +93,7 @@ public class main {
 			System.out.println("...............................=#!................");
 			System.out.println("..............................,...................");
 			System.out.println("==================================================");
-			System.out.println("         알쏭달쏭 뮤직배틀에 오신것을 환영합니다.          ");
+			System.out.println("         우당탕탕 뮤직배틀에 오신것을 환영합니다.          ");
 			System.out.print(" [0] 룰설명 [1] 회원가입 [2] 게임시작 [3] 랭킹확인 [4] 종료 >> ");
 			int select = sc.nextInt();
 			if (select == 0) {// 룰 설명
