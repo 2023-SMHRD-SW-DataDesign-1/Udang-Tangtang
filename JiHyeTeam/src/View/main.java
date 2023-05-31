@@ -19,7 +19,7 @@ public class main {
 
       Scanner sc = new Scanner(System.in);
 
-      System.out.println("=======회원가입======");
+      System.out.println("=======노래맞추기게임======");
       while (true) {
          System.out.print("[1] 회원가입 [2] 로그인 [3] 게임시작 [4] 랭킹확인 [5] 종료 >> ");
          int select = sc.nextInt();

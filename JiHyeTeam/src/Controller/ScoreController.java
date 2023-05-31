@@ -13,7 +13,7 @@ public class ScoreController {
 		String result = null;
 		if (cnt > 0) {
 			
-			result = memdto.getId()+"님의 점수는"+memdto.getScore()+"입니다.";
+			result = memdto.getId()+"님의 점수는"+score+"입니다.";
 		} else {
 			System.out.println("");
 			result = "점수가 저장되지 않았습니다.";
