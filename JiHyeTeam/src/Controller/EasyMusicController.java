@@ -33,6 +33,8 @@ public class EasyMusicController {
 		int life = 3;
 		for (int i = 0; i < EasyMusicList.size(); i++) {
 			
+			Timecount tce = new Timecount();
+			tce.easytiemr();
 			System.out.print("노래제목을 입력해주세요 >> ");
 			mp3.play(EasyMusicList.get(i).getMusicPath()); 
 			String answer = sc.next();
