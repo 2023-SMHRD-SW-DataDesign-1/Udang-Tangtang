@@ -22,12 +22,12 @@ public class NormalMusicController {
 		// 곡세팅
 
 		normalMusicList.add(new musicDTO("친구여", "조피디", "music/친구여.mp3", "ㅊㄱㅇ"));
+		normalMusicList.add(new musicDTO("쏘핫", "원더걸스", "music/SoHot.mp3", "ㅆㅎ"));
 		normalMusicList.add(new musicDTO("죄와벌", "SG워너비", "music/죄와벌.mp3", "ㅈㅇㅂ"));
 		normalMusicList.add(new musicDTO("내사람", "SG워너비", "music/내사람.mp3", "ㄴㅅㄹ"));
 		normalMusicList.add(new musicDTO("미인", "이기찬", "music/미인.mp3", "ㅁㅇ"));
-		normalMusicList.add(new musicDTO("쏘핫", "원더걸스", "music/SoHot.mp3", "ㅆㅎ"));
 		normalMusicList.add(new musicDTO("쥐", "소녀시대", "music/Gee.mp3", "ㅈ"));
-		normalMusicList.add(new musicDTO("배드걸굿걸", "소녀시대", "music/BadGirlGoodGirl.mp3", "ㅂㄷㄱㄱㄱ"));
+		normalMusicList.add(new musicDTO("배드걸굿걸", "미스에이", "music/BadGirlGoodGirl.mp3", "ㅂㄷㄱㄱㄱ"));
 		normalMusicList.add(new musicDTO("롤리폴리", "티아라", "music/RolyPoly.mp3", "ㄹㄹㅍㄹ"));
 		normalMusicList.add(new musicDTO("열정", "세븐", "music/열정.mp3", "ㅇㅈ"));
 		normalMusicList.add(new musicDTO("자니", "프라이머리", "music/자니.mp3", "ㅈㄴ"));

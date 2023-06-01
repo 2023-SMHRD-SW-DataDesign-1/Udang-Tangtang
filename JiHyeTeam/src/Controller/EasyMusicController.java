@@ -21,12 +21,12 @@ public class EasyMusicController {
 	public EasyMusicController() {
 		// 곡세팅
 
-		easyMusicList.add(new musicDTO("썸", "소유&정기고", "music/썸.mp3", "ㅆ"));
 		easyMusicList.add(new musicDTO("뱅뱅뱅", "빅뱅", "music/뱅뱅뱅.mp3", "ㅂㅂㅂ"));
 		easyMusicList.add(new musicDTO("치얼업", "트와이스", "music/cheerup.mp3", "ㅊㅇㅇ"));
 		easyMusicList.add(new musicDTO("첫눈처럼너에게가겠다", "에일리", "music/첫눈처럼너에게가겠다.mp3", "ㅊㄴㅊㄹㄴㅇㄱㄱㄱㄷ"));
+		easyMusicList.add(new musicDTO("썸", "소유&정기고", "music/썸.mp3", "ㅆ"));
 		easyMusicList.add(new musicDTO("사랑을했다", "아이콘", "music/사랑을했다.mp3", "ㅅㄹㅇㅎㄷ"));
-		easyMusicList.add(new musicDTO("2002", "앤마리", "music/2002.mp3", "숫자4개"));
+		easyMusicList.add(new musicDTO("오늘도빛나는너에게", "마크툽", "music/오늘도빛나는너에게.mp3", "ㅇㄴㄷㅂㄴㄴㄴㅇㄱ"));
 		easyMusicList.add(new musicDTO("아무노래", "지코", "music/아무노래.mp3", "ㅇㅁㄴㄹ"));
 		easyMusicList.add(new musicDTO("셀러브리티", "아이유", "music/Celebrity.mp3", "ㅅㄹㅂㄹㅌ"));
 		easyMusicList.add(new musicDTO("러브다이브", "아이브", "music/LOVEDIVE.mp3", "ㄹㅂㄷㅇㅂ"));
