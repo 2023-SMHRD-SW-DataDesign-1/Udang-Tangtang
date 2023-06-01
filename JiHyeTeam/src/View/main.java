@@ -111,6 +111,10 @@ public class main {
 				memberDTO memdto = new memberDTO(id, pw);
 				joinController join = new joinController();
 				join.Join(memdto);
+				
+				System.out.println();
+				System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
+				sc.nextInt();
 
 			} else if (select == 2) { // 게임 시작
 				System.out.println("==================================================");
