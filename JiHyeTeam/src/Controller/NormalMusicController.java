@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-
 import javazoom.jl.player.MP3Player;
 import musicDTO.musicDTO;
 
@@ -65,9 +64,7 @@ public class NormalMusicController {
 				System.out.println("정답입니다.");
 				correct++;
 				i++;
-				if(i == normalMusicList.size()-1) {
-					System.out.println("모든문제가 출제되었습니다! 게임종료!");
-				}
+				
 			} else {
 				System.out.println("정답이 아닙니다.");
 				life--;
@@ -91,8 +88,9 @@ public class NormalMusicController {
 							score += 75;
 							System.out.println("정답입니다.");
 							correct++;
+							
 							if(i == normalMusicList.size()-1) {
-								System.out.println("모든문제가 출제되었습니다! 게임종료!");
+							System.out.println("모든문제가 출제되었습니다! 게임종료!");
 							}
 
 						} else {
@@ -117,21 +115,17 @@ public class NormalMusicController {
 						}
 					}
 				}
-				i++;
-				if (life == 0) {
-					System.out.println("game over TㅅT");
-					System.out.println();
-					break;
-				}
+				
+				
+			i++;
 			}
 
 			if (mp3.isPlaying()) {
 				mp3.stop();
 			}
-		}
-		return score;
 	}
-
 	
+	return score;
+}
 
 }

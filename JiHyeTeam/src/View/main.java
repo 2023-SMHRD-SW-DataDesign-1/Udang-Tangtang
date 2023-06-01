@@ -79,6 +79,7 @@ public class main {
 				System.out.println("==================================================");
 				System.out.println();
 				System.out.println("               <<룰 설명>>");
+				System.out.println();
 				System.out.println("- 난이도별로 각각 10개의 문제가 출제됩니다.\r\n"
 						+ "- 노래는 60초 동안만 흘러나와요.\r\n"
 						+ "- 정답은 띄어쓰기없이 한글로만 작성해주세요.\r\n"

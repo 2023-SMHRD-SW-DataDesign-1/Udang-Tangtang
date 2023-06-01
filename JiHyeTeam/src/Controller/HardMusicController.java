@@ -52,10 +52,10 @@ public class HardMusicController {
 			if (mp3.isPlaying()) {// 음악 정지
 				mp3.stop();
 			}
+			mp3.play(hardMusicList.get(i).getMusicPath());
 			System.out.println();
 			System.out.println("**************************************************");
 			System.out.println();
-			mp3.play(hardMusicList.get(i).getMusicPath());
 			System.out.print("노래제목을 입력해주세요 >> ");
 			String answer = sc.next();
 
@@ -63,10 +63,7 @@ public class HardMusicController {
 				score += 200;
 				System.out.println("정답입니다.");
 				correct++;
-				i++;
-				if(i == hardMusicList.size()-1) {
-					System.out.println("모든문제가 출제되었습니다! 게임종료!");
-				}
+				i++;				
 			} else {
 				System.out.println("정답이 아닙니다.");
 				life--;
@@ -89,6 +86,7 @@ public class HardMusicController {
 							score += 100;
 							System.out.println("정답입니다.");
 							correct++;
+							
 							if(i == hardMusicList.size()-1) {
 								System.out.println("모든문제가 출제되었습니다! 게임종료!");
 							}
@@ -112,6 +110,7 @@ public class HardMusicController {
 							System.out.println("PASS!");
 						} else {
 							System.out.println("모든문제가 출제되었습니다! 게임종료!");
+							System.out.println();
 						}
 					}
 				}
