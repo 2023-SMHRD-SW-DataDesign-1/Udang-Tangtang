@@ -88,7 +88,7 @@ public class NormalMusicController {
 						String answer2 = sc.next();
 
 						if (normalMusicList.get(i).getName().equals(answer2)) {
-							score += 50;
+							score += 75;
 							System.out.println("정답입니다.");
 							correct++;
 							if(i == normalMusicList.size()-1) {

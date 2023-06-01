@@ -86,7 +86,7 @@ public class HardMusicController {
 						String answer2 = sc.next();
 
 						if (hardMusicList.get(i).getName().equals(answer2)) {
-							score += 50;
+							score += 100;
 							System.out.println("정답입니다.");
 							correct++;
 							if(i == hardMusicList.size()-1) {
