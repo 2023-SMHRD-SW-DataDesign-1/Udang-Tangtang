@@ -131,6 +131,7 @@ public class main {
 					}
 					mp3.play("music/로비BGM.mp3");
 					System.out.println("점수저장을 위해 로그인해주세요 :) ♥");
+					System.out.println("☆로그인 실패시 점수가 저장되지 않으니 유의하세요!!☆");
 					System.out.println();
 					System.out.println("아이디 입력 : ");
 					String id = sc.next();
@@ -207,23 +208,26 @@ public class main {
 				mp3.play("music/랭킹BGM.mp3");
 				String result = null;
 				memberDAO dao = new memberDAO();
-				
-                
-	            System.out.println("	          .dkoooooooooooookl.");              
-	            System.out.println("	        ,oox.              .dxol.");
-	            System.out.println("	        o0cco               0ld0;");
-	            System.out.println("	        oOO0o               O0oo ");
-	            System.out.println("	        l0:kd.             .kao0,");
-	            System.out.println("	        .cxkKO            .KKkx;");
-	            System.out.println("	         .:xKx           ;O0o,");
-	            System.out.println("	            .lxdl:;;;:ldxc.");
-	            System.out.println("	              .;OKdcxXx,.");
-	            System.out.println("	                 KdcxXx  ");
-	            System.out.println("	               .dk. ,Oc");
-	            System.out.println("	               .xKo:xKl.");
-	            System.out.println("	              'dkocccdkl.");
-	            System.out.println("	          .,;dKOc,,,,;oK0l;.,");
-	            System.out.println("	         qkOooolllllllloood0dp");
+				System.out.println("--------------------------------------------------");
+                System.out.println();
+                System.out.println();
+                System.out.println();
+	            System.out.println("	         .dkoooooooooooookl.");              
+	            System.out.println("	       ,oox.              .dxol.");
+	            System.out.println("	       o0cco               0ld0;");
+	            System.out.println("	       oOO0o               O0oo ");
+	            System.out.println("	       l0:kd.             .kao0,");
+	            System.out.println("	       .cxkKO            .KKkx;");
+	            System.out.println("	        .:xKx           ;O0o,");
+	            System.out.println("	           .lxdl:;;;:ldxc.");
+	            System.out.println("	             .;OKdcxXx,.");
+	            System.out.println("	                KdcxXx  ");
+	            System.out.println("	              .dk. ,Oc");
+	            System.out.println("	              .xKo:xKl.");
+	            System.out.println("	             'dkocccdkl.");
+	            System.out.println("	         .,;dKOc,,,,;oK0l;.,");
+	            System.out.println("	        qkOooolllllllloood0dp");
+	            
 	            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	            System.out.println("                      ☆1위☆                      ");
 	            System.out.println();

@@ -78,9 +78,12 @@ public class NormalMusicController {
 					if (choice == 1) {
 
 
-						System.out.println("=======================================");
-						System.out.println(normalMusicList.get(i).getSinger() + "-" + normalMusicList.get(i).getHint());
-						System.out.println("=======================================");
+						System.out.println("==================================================");
+						System.out.println("                      [Hint]                      ");
+						System.out.println();
+						System.out.println("                "+normalMusicList.get(i).getSinger() + " - " + normalMusicList.get(i).getHint());
+						System.out.println();
+						System.out.println("==================================================");
 						System.out.print("노래제목을 다시 입력해주세요 >> ");
 						String answer2 = sc.next();
 
@@ -100,7 +103,7 @@ public class NormalMusicController {
 								
 							}else {
 								System.out.println("모든문제 출제완료!");
-								System.out.println("=======================================");
+								System.out.println("==================================================");
 							}
 
 						}

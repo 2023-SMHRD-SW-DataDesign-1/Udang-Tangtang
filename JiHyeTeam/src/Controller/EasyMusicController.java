@@ -56,6 +56,7 @@ public class EasyMusicController {
 
 			mp3.play(easyMusicList.get(i).getMusicPath());
 			System.out.println();
+			
 			System.out.println("**************************************************");
 			System.out.println();
 			System.out.print("노래제목을 입력해주세요 >> ");
@@ -75,9 +76,12 @@ public class EasyMusicController {
 					choice = sc.nextInt();
 					if (choice == 1) {
 
-						System.out.println("=======================================");
-						System.out.println(easyMusicList.get(i).getSinger() + "-" + easyMusicList.get(i).getHint());
-						System.out.println("=======================================");
+						System.out.println("==================================================");
+						System.out.println("                      [Hint]                      ");
+						System.out.println();
+						System.out.println("                "+easyMusicList.get(i).getSinger() + " - " + easyMusicList.get(i).getHint());
+						System.out.println();
+						System.out.println("==================================================");
 						System.out.print("노래제목을 다시 입력해주세요 >> ");
 						String answer2 = sc.next();
 
@@ -97,7 +101,7 @@ public class EasyMusicController {
 								
 							}else {
 								System.out.println("모든문제 출제완료!");
-								System.out.println("=======================================");
+								System.out.println("==================================================");
 							}
 
 						}
