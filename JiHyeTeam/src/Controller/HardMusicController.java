@@ -72,7 +72,7 @@ public class HardMusicController {
 				life--;
 				System.out.println("기회가" + life + "번 남았습니다.");
 				if (life != 0) {
-					System.out.println("[1]힌트보기 [2]다음노래로 패스 >> ");
+					System.out.println("[1]힌트보기 [2]다음노래로 넘어가기 >> ");
 					choice = sc.nextInt();
 					if (choice == 1) {
 
