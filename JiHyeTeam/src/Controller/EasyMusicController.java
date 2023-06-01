@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-import hintDTO.hintpack;
+
 import javazoom.jl.player.MP3Player;
 import musicDTO.musicDTO;
 
@@ -43,7 +43,9 @@ public class EasyMusicController {
 		while (i < 10) {
 
 			if (life == 0) {
-				System.out.println("game over");
+				System.out.println();
+				System.out.println("game over TㅅT");
+				System.out.println();
 
 				break;
 			}
@@ -69,13 +71,39 @@ public class EasyMusicController {
 					System.out.println("[1]힌트보기 [2]다음노래로 패스 >> ");
 					choice = sc.nextInt();
 					if (choice == 1) {
-						hintpack hintpack2 = hint(correct, i, life, score);
-						life = hintpack2.getLife();
+
+						System.out.println("=======================================");
+						System.out.println(easyMusicList.get(i).getSinger() + "-" + easyMusicList.get(i).getHint());
+						System.out.println("=======================================");
+						System.out.print("노래제목을 다시 입력해주세요 >> ");
+						String answer2 = sc.next();
+
+						if (easyMusicList.get(i).getName().equals(answer2)) {
+							score += 50;
+							System.out.println("정답입니다.");
+							correct++;
+							if(i == easyMusicList.size()-1) {
+								System.out.println("모든문제가 출제되었습니다! 게임종료!");
+							}
+
+						} else {
+							if (i != easyMusicList.size() - 1) {
+								System.out.println("정답이 아닙니다.");
+								life--;
+								System.out.println("기회가" + life + "번 남았습니다.");
+								
+							}else {
+								System.out.println("모든문제 출제완료!");
+								System.out.println("=======================================");
+							}
+
+						}
 					} else {
 						if (i != easyMusicList.size() - 1) {
 							System.out.println("PASS!");
 						} else {
 							System.out.println("모든문제가 출제되었습니다! 게임종료!");
+							System.out.println();
 						}
 					}
 				}
@@ -91,38 +119,6 @@ public class EasyMusicController {
 		return score;
 	}
 
-	public hintpack hint(int correct, int i, int life, int score) {
-
-		hintpack hintpack = new hintpack(correct, i, life, score);
-
-		System.out.println("=======================================");
-		System.out.println(easyMusicList.get(i).getSinger() + "-" + easyMusicList.get(i).getHint());
-		System.out.println("=======================================");
-		System.out.print("노래제목을 다시 입력해주세요 >> ");
-		String answer2 = sc.next();
-
-		if (easyMusicList.get(i).getName().equals(answer2)) {
-			score += 50;
-			System.out.println("정답입니다.");
-			correct++;
-			if(i == easyMusicList.size()-1) {
-				System.out.println("모든문제가 출제되었습니다! 게임종료!");
-			}
-
-		} else {
-			if (i != easyMusicList.size() - 1) {
-				System.out.println("정답이 아닙니다.");
-				life--;
-				System.out.println("기회가" + life + "번 남았습니다.");
-				
-			}else {
-				System.out.println("모든문제 출제완료!");
-				System.out.println("=======================================");
-			}
-
-		}
-		hintpack = new hintpack(correct, i, life, score);
-		return hintpack;
-	}
+	
 
 }

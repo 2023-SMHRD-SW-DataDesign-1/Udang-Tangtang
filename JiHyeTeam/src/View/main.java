@@ -175,7 +175,8 @@ public class main {
 						mp3.stop();
 					}
 					mp3.play("music/로비BGM.mp3");
-					System.out.println("점수저장을 위해 로그인해주세요 :)");
+					System.out.println("점수저장을 위해 로그인해주세요 :) ♥");
+					System.out.println();
 					System.out.println("아이디 입력 : ");
 					String id = sc.next();
 					System.out.println("비밀번호 입력 : ");
