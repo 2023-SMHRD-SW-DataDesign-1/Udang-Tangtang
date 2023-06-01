@@ -35,7 +35,7 @@ public class NormalMusicController {
 	}
 
 	public int NormalPlay() {
-		int life = 3;
+		int life = 4;
 		int correct = 0;
 		int i = 0;
 		int score = 0;

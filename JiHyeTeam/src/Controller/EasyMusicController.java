@@ -35,7 +35,7 @@ public class EasyMusicController {
 	}
 
 	public int EasyPlay() {
-		int life = 3;
+		int life = 5;
 		int correct = 0;
 		int i = 0;
 		int score = 0;
