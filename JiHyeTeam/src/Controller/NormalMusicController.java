@@ -29,7 +29,7 @@ public class NormalMusicController {
 		normalMusicList.add(new musicDTO("쥐", "소녀시대", "music/Gee.mp3", "ㅈ"));
 		normalMusicList.add(new musicDTO("배드걸굿걸", "소녀시대", "music/BadGirlGoodGirl.mp3", "ㅂㄷㄱㄱㄱ"));
 		normalMusicList.add(new musicDTO("롤리폴리", "티아라", "music/RolyPoly.mp3", "ㄹㄹㅍㄹ"));
-		normalMusicList.add(new musicDTO("강남스타일", "싸이", "music/강남스타일.mp3", "ㄱㄴㅅㅌㅇ"));
+		normalMusicList.add(new musicDTO("열정", "세븐", "music/열정.mp3", "ㅇㅈ"));
 		normalMusicList.add(new musicDTO("자니", "프라이머리", "music/자니.mp3", "ㅈㄴ"));
 
 	}
@@ -53,7 +53,9 @@ public class NormalMusicController {
 			if (mp3.isPlaying()) {// 음악 정지
 				mp3.stop();
 			}
-
+			System.out.println();
+			System.out.println("**************************************************");
+			System.out.println();
 			mp3.play(normalMusicList.get(i).getMusicPath());
 			System.out.print("노래제목을 입력해주세요 >> ");
 			String answer = sc.next();

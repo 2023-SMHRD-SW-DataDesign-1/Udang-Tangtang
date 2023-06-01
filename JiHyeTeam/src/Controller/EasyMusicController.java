@@ -55,6 +55,9 @@ public class EasyMusicController {
 			}
 
 			mp3.play(easyMusicList.get(i).getMusicPath());
+			System.out.println();
+			System.out.println("**************************************************");
+			System.out.println();
 			System.out.print("노래제목을 입력해주세요 >> ");
 			String answer = sc.next();
 

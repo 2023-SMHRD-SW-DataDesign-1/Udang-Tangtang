@@ -137,15 +137,16 @@ public class main {
 				join.Join(memdto);
 
 			} else if (select == 2) { // 게임 시작
-
-				
+				System.out.println("==================================================");
+				System.out.println();
 				System.out.print("난이도 선택 [1] Easy   [2] Normal   [3] Hard >> ");
 				int choice = sc.nextInt();
-
+				System.out.println();
 				if(mp3.isPlaying()) {
 					mp3.stop();
 				}
 				if (choice == 1) {// 이지난이도
+					System.out.println("==================================================");
 					EasyMusicController easy = new EasyMusicController();
 					int score = easy.EasyPlay();
 
@@ -153,7 +154,8 @@ public class main {
 						mp3.stop();
 					}
 					mp3.play("music/로비BGM.mp3");
-					System.out.println("점수저장을 위해 로그인해주세요 :)");
+					System.out.println("점수저장을 위해 로그인해주세요 :) ♥");
+					System.out.println();
 					System.out.println("아이디 입력 : ");
 					String id = sc.next();
 					System.out.println("비밀번호 입력 : ");
@@ -169,7 +171,7 @@ public class main {
 					
 					
 				} else if (choice == 2) {// 노말난이도
-
+					System.out.println("==================================================");
 					NormalMusicController normal = new NormalMusicController();
 					int score = normal.NormalPlay();
 					
@@ -192,7 +194,7 @@ public class main {
 					sc.nextInt();
 
 				} else if (choice == 3) {// 하드난이도
-
+					System.out.println("==================================================");
 					HardMusicController hard = new HardMusicController();
 					int score = hard.HardPlay();
 					
@@ -200,7 +202,7 @@ public class main {
 						mp3.stop();
 					}
 					mp3.play("music/로비BGM.mp3");
-					System.out.println("점수저장을 위해 로그인해주세요 :)");
+					System.out.println("점수저장을 위해 로그인해주세요 :) ♥");
 
 					System.out.println("아이디 입력 : ");
 					String id = sc.next();
