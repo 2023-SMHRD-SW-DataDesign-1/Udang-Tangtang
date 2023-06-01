@@ -97,8 +97,8 @@ public class main {
 						+ " ☆로그인 실패시 점수가 저장되지 않으니 유의하세요!!☆\r\n"
 						+ "");
 				System.out.println();
-				System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
-				sc.nextInt();
+				System.out.print("메인화면으로 돌아가시려면 아무거나 입력해주세요 >>");
+				sc.next();
 				
 			
 
@@ -113,8 +113,8 @@ public class main {
 				join.Join(memdto);
 				
 				System.out.println();
-				System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
-				sc.nextInt();
+				System.out.print("메인화면으로 돌아가시려면 아무거나 입력해주세요 >>");
+				sc.next();
 
 			} else if (select == 2) { // 게임 시작
 				System.out.println("==================================================");
@@ -147,8 +147,8 @@ public class main {
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
 					System.out.println();
-					System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
-					sc.nextInt();
+					System.out.print("메인화면으로 돌아가시려면 아무거나 입력해주세요 >>");
+					sc.next();
 					
 					
 				} else if (choice == 2) {// 노말난이도
@@ -171,8 +171,8 @@ public class main {
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
 					System.out.println();
-					System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
-					sc.nextInt();
+					System.out.print("메인화면으로 돌아가시려면 아무거나 입력해주세요 >>");
+					sc.next();
 
 				} else if (choice == 3) {// 하드난이도
 					System.out.println("==================================================");
@@ -194,8 +194,8 @@ public class main {
 					String result = scocon.hardScoreController(new memberDTO(id, pw), score);
 					System.out.println(result);
 					System.out.println();
-					System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
-					sc.nextInt();
+					System.out.print("메인화면으로 돌아가시려면 아무거나 입력해주세요 >>");
+					sc.next();
 			
 					
 
@@ -242,8 +242,8 @@ public class main {
 	            System.out.println();
 	            dao.Rankingck();
 	            System.out.println();
-				System.out.print("메인화면으로 돌아가시려면 아무숫자나 입력해주세요 >>");
-				sc.nextInt();
+				System.out.print("메인화면으로 돌아가시려면 아무거나 입력해주세요 >>");
+				sc.next();
 
 			} else if (select == 4) { // 종료
 				System.out.println("종료되었습니다.");
