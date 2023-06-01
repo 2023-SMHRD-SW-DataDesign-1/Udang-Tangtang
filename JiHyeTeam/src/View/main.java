@@ -69,10 +69,10 @@ public class main {
 			System.out.println(".........-*!!*:!!. ~---;:::~  ~:, ................");
 			System.out.println("............ ..=--  .~:::~,   ~~: ................");
 			System.out.println("==================================================");
-			System.out.println("           우당탕탕 뮤직배틀에 오신것을 환영합니다.          ");
+			System.out.println("        우당탕탕 뮤직배틀에 오신것을 환영합니다.          ");
 			System.out.println();
-			System.out.println("                   [0] 룰 설명");
-			System.out.print("     [1] 회원가입 [2] 게임시작 [3] 랭킹확인 [4] 종료 >> ");
+			System.out.println("                  [0] 룰 설명");
+			System.out.print("[1] 회원가입 [2] 게임시작 [3] 랭킹확인 [4] 종료 >> ");
 			int select = sc.nextInt();
 			if (select == 0) {// 룰 설명
 				System.out.println();
