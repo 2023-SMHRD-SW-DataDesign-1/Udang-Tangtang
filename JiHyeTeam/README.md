@@ -9,4 +9,4 @@
 
 <img src="https://img.shields.io/badge/resnet34-F05032?style=for-the-badge&logo=resnet34&logoColor=white">
 <img src="https://img.shields.io/badge/VGG19-F05032?style=for-the-badge&logo=VGG19&logoColor=white">
-<img src="https://img.shields.io/badge/FastAI-F05032?style=for-the-badge&logo=FastAI&logoColor=white">
+<img src="https://img.shields.io/badge/FastAI-F05032?style=for-the-badge&logo=JAVA&logoColor=white">
